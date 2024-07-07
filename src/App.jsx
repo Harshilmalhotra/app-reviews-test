@@ -2,17 +2,18 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Dashboard from './pages/Dashboard'
+import Dashboard from './routes/Dashboard'
+import VibeCheck from './routes/VibeCheck'
+import Sidebar from './components/Sidebar'
 
-function App() {
-  const [count, setCount] = useState(0)
+import {BrowserRouter as Router,Routes,Route }from'react-router-dom';
 
+export default function App() {
   return (
     <>
-    <Dashboard />
-      
+    <Sidebar/>
     </>
   )
 }
 
-export default App
+
