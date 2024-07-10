@@ -13,7 +13,7 @@ export default function Dashboard() {
 
 
                 <Sidebar />
-                <div className="ml-[58px] mt-[58px]">
+                <div className="ml-[50px] mt-[50px]">
                     <Dropdown />
 
                     <EagleEye />
