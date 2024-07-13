@@ -66,7 +66,7 @@ export default function Sidebar() {
         <Link to="/overview" className='flex items-center flex-col'><img src={Overview} alt="Overview" className="w-[60px] h-[60px]"/>Overview</Link>
         <Link to="/founder" className='flex items-center flex-col'><img src={Founder} alt="Founder" className="w-[60px] h-[60px]"/>Founder's Desk</Link>
         
-        
+        <button onClick={handleSignOut}>Sign Out</button>
         </div>  
         <a href="/profile "><img src={Profile} alt="Profile" className="w-[75px] h-[75px] mt-[30px] ml-4  align-bottom"/></a>
 
