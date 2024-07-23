@@ -1,8 +1,10 @@
-# React + Vite
+# App Reviews
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Problem:
+Businesses want insights on their customers, going through your app’s play store or App Store reviews is one of the best way to do this. Because most apps have thousands of reviews, it becomes really hard to get all the insights you can out of these reviews.
 
-Currently, two official plugins are available:
+### Where we come in: 
+We’ll be creating a website that go through these companies reviews, and gives insights about customer sentiment sentiments based on topics, app version etc. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Market Segment Target: 
+Companies that have mobile apps. 
