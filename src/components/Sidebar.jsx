@@ -9,13 +9,9 @@ import {Link} from 'react-router-dom';
 
 import { useNavigate } from 'react-router-dom'; // Step 1: Import useNavigate
 import {BrowserRouter as Router,Routes,Route }from'react-router-dom';
-
-// src/App.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-
-   
 
 
 export default function Sidebar() {
@@ -52,24 +48,24 @@ export default function Sidebar() {
 
     return (
         <>
-        <div className="flex flex-col w-[139px] h-screen bg-slate-600 px-[11px] py-[21px]">
-        <img src={Logo} alt="Logo" className="w-[100px] h-[100px] "/>
-        {profile && (
-                <div>
-                    <h2>Profile</h2>
-                    <p>Username: {profile.username}</p>
+            <div className="flex flex-col w-[139px] h-screen bg-slate-600 px-[11px] py-[21px]">
+                <img src={Logo} alt="Logo" className="w-[100px] h-[100px] "/>
+                        {/* {profile && (
+                                <div>
+                                    <h2>Profile</h2>
+                                    <p>Username: {profile.username}</p>
+                              
+                            )} */}
+                <div className="flex flex-col space-y-6 pt-6">
+                    <Link to="/dashboard" className='flex items-center flex-col'><img src={Dashboard} alt="Dashboard" className="w-[60px] h-[60px]"/>Dashboard</Link>
+                    <Link to="/vibe" className='flex items-center flex-col'><img src={Vibe} alt="Vibe" className="w-[60px] h-[60px]"/>Vibe Check</Link>
+                    <Link to="/overview" className='flex items-center flex-col'><img src={Overview} alt="Overview" className="w-[60px] h-[60px]"/>Overview</Link>
+                    <Link to="/founder" className='flex items-center flex-col'><img src={Founder} alt="Founder" className="w-[60px] h-[60px]"/>Founder's Desk</Link>
+                
+                    {/* <button onClick={handleSignOut}>Sign Out</button> */}
+                
+                <a href="/profile " className='flex items-center flex-col'><img src={Profile} alt="Profile" className="w-[75px] h-[75px]"/> Profile</a>
                 </div>
-            )}
-        <div className="flex flex-col space-y-4  pt-[83px]">
-        <Link to="/dashboard" className='flex items-center flex-col'><img src={Dashboard} alt="Dashboard" className="w-[60px] h-[60px]"/>Dashboard</Link>
-        <Link to="/vibe" className='flex items-center flex-col'><img src={Vibe} alt="Vibe" className="w-[60px] h-[60px]"/>Vibe Check</Link>
-        <Link to="/overview" className='flex items-center flex-col'><img src={Overview} alt="Overview" className="w-[60px] h-[60px]"/>Overview</Link>
-        <Link to="/founder" className='flex items-center flex-col'><img src={Founder} alt="Founder" className="w-[60px] h-[60px]"/>Founder's Desk</Link>
-        
-        <button onClick={handleSignOut}>Sign Out</button>
-        </div>  
-        <a href="/profile "><img src={Profile} alt="Profile" className="w-[75px] h-[75px] mt-[30px] ml-4  align-bottom"/></a>
-
         </div>
         </>
     )

@@ -4,7 +4,7 @@ import { Bar,Doughnut,Line } from 'react-chartjs-2';
 
 export default function StarVNumber() {
     return (
-        <div className="flex flex-col items-center justify-center bg-white h-[380px] w-[830px] rounded-[20px] drop-shadow-xl p-2">
+        <div className="flex flex-col items-center justify-center bg-white h-full w-[830px] rounded-[20px] drop-shadow-xl p-2">
            
             <Bar
                 data={{                                 

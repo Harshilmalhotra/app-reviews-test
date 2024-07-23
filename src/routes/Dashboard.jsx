@@ -1,34 +1,33 @@
 import Sidebar from "../components/Sidebar"
 import Dropdown from "../components/Dropdown"
-import EagleEye from '../components/EagleEye';
-import BestReview from '../components/BestReview';
-import FunnyReview from '../components/FunnyReview';
-import MostRated from '../components/MostRated';
-import StarVNumber from '../components/StarVNumber';
+import EagleEye from '../components/Dashboard/EagleEye';
+import BestReview from '../components/Dashboard/BestReview';
+import FunnyReview from '../components/Dashboard/FunnyReview';
+import MostRated from '../components/Dashboard/MostRated';
+import StarVNumber from '../components/Dashboard/StarVNumber';
 export default function Dashboard() {
 
     return (
         <>
-            <div className="flex bg-root-2">
-
-
+             <div className="flex bg-root-2">   {/* left right division */}
                 <Sidebar />
-                <div className="ml-[50px] mt-[50px]">
+
+                    <div className="flex flex-col m-4 ml-8">
                     <Dropdown />
 
-                    <EagleEye />
-                    <MostRated />
-
-                </div>
-                <div className="ml-[58px] mt-[58px]">
-                    <StarVNumber />
-                    <div className="flex flex-row mt-[45px] gap-[32px]">
-                        <BestReview />
-                        <FunnyReview />
-                    </div>
-
-                </div>
-
+                    <div className=" flex flex-row gap-8 h-[300px] mt-4">   {/* dropdown division */}
+                        
+                        <EagleEye />
+                        <StarVNumber />
+                        
+                    </div>                                                   
+                                <div className="flex flex-row  gap-8 mt-5 h-[280px]">  
+                                    <MostRated /> {/* best and funny review division */}
+                                    <BestReview />
+                                    <FunnyReview />
+                                </div>
+                      
+                        </div>
             </div>
 
         </>
