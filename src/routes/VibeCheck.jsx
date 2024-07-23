@@ -1,8 +1,8 @@
 import Sidebar from "../components/Sidebar"
 import Dropdown from "../components/Dropdown"
-import Saata from '../components/saAtA';
-import SaMoM from '../components/saMoM';
-import Topic from '../components/TopicVsSentiments';
+import Saata from '../components/Vibecheck/saAtA';
+import SaMoM from '../components/Vibecheck/saMoM';
+import Topic from '../components/Vibecheck/TopicVsSentiments';
 export default function Dashboard() {
 
     return (
