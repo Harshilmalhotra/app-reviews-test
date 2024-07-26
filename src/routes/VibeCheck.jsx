@@ -1,6 +1,6 @@
 import Sidebar from "../components/Sidebar"
 import Dropdown from "../components/Dropdown"
-import Saata from '../components/Vibecheck/saAtA';
+import ReviewsVSMonth from '../components/Vibecheck/ReviewsVSMonth';
 import SaMoM from '../components/Vibecheck/saMoM';
 import Topic from '../components/Vibecheck/TopicVsSentiments';
 export default function Dashboard() {
@@ -15,7 +15,7 @@ export default function Dashboard() {
                     <Dropdown />
                         <div className="flex flex-col">
                                 <div className="flex flex-row mt-[51px] gap-[27px] ">
-                                    <Saata />
+                                    <ReviewsVSMonth />
                                     <Topic/>
                                 </div>
                                 <SaMoM />

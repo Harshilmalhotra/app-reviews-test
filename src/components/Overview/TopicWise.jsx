@@ -1,65 +1,88 @@
+import React, { useState } from 'react';
+
 export default function TopicWise() {
-    return (
-        <>
-       
-  
-      
-    <div className="flex flex-wrap justify-center items-center gap-4 p-4">
-      <div className="flex flex-col gap-4">
-        <div className="card bg-root-1 w-full shadow-xl" style={{ width: '400px', height: '297px', marginBottom: '0px' }}>
-          <div className="card-body flex flex-col items-center justify-center">
-            <h1 className='card-title text-6xl'><strong>4.9</strong></h1>
-            <div className="rating">
-              <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-              <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" defaultChecked />
-              <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-              <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-              <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-            </div>
-            <p className="text-sm mt-2">On playstore</p>
-          </div>
+  const [expandedSection, setExpandedSection] = useState(null);
+
+  const toggleSection = (section) => {
+    setExpandedSection(expandedSection === section ? null : section);
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center p-8  w-[850px] bg-root-1 rounded-lg h-[600px]">
+      <div
+        className="bg-[#696875] text-white p-4 rounded-lg shadow-md w-full cursor-pointer z-30"
+        onClick={() => toggleSection('topic')}
+      >
+        <div className="flex justify-between items-center">
+          <h2 className="text-3xl font-bold">Topic wise</h2>
+          <svg
+            className={`w-6 h-6 transition-transform duration-1000 ${expandedSection === 'topic' ? 'transform rotate-180' : ''}`} // Increased duration to 1000ms
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
         </div>
-        <div className="card bg-root-1 w-full shadow-xl" style={{ width: '400px', height: '297px', marginTop: '20px' }}>
-          <div className="card-body flex justify-around items-center">
-            <button className="btn bg-red-500 text-white">Remove</button>
-            <button className="btn bg-green-500 text-white">Assort by value</button>
-            <button className="btn bg-blue-500 text-white">Favourite Review</button>
+        {expandedSection === 'topic' && (
+          <div className="mt-2">
+            <ul className="list-disc list-inside">
+              <li>Functionality</li>
+              <li>Content and Data</li>
+              <li>Monetization</li>
+            </ul>
           </div>
-        </div>
+        )}
       </div>
-      <div className="card bg-root-1 shadow-xl w-full flex justify-center items-center" style={{ width: '800px', height: '608px' }}>
-        <div className="w-full flex justify-center">
-          <div className="w-full" style={{ maxWidth: '687px' }}>
-            <div className="collapse bg-base-200 mb-4">
-              <input type="radio" name="my-accordion-1" defaultChecked />
-              <div className="collapse-title text-xl font-medium">Topic wise</div>
-              <div className="collapse-content">
-                <p>- Functionality</p>
-                <p>- Content and Data</p>
-                <p>- Monetization</p>
-              </div>
-            </div>
-            <div className="collapse bg-base-200 mb-4">
-              <input type="radio" name="my-accordion-1" />
-              <div className="collapse-title text-xl font-medium">Star wise</div>
-              <div className="collapse-content">
-                <p>hello</p>
-              </div>
-            </div>
-            <div className="collapse bg-base-200">
-              <input type="radio" name="my-accordion-1" />
-              <div className="collapse-title text-xl font-medium">Time wise</div>
-              <div className="collapse-content">
-                <p>hello</p>
-              </div>
-            </div>
-          </div>
+
+      <div
+        className="bg-[#4F4D5E] text-white p-4 rounded-lg shadow-md w-full cursor-pointer -translate-y-5 z-20 pt-6"
+        onClick={() => toggleSection('star')}
+      >
+        <div className="flex justify-between items-center">
+          <h2 className="text-3xl font-bold">Star wise</h2>
+          <svg
+            className={`w-6 h-6 transition-transform duration-1000 ${expandedSection === 'star' ? 'transform rotate-180' : ''}`} // Increased duration to 1000ms
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
         </div>
+        {expandedSection === 'star' && (
+          <div className="mt-2">
+            <p>Content for Star wise...</p>
+          </div>
+        )}
+      </div>
+
+      <div
+        className="bg-[#262244] text-white p-4 rounded-lg shadow-md w-full cursor-pointer -translate-y-10 z-0 pt-6"
+        onClick={() => toggleSection('time')}
+      >
+        <div className="flex justify-between items-center">
+          <h2 className="text-3xl font-bold">Time wise</h2>
+          <svg
+            className={`w-6 h-6 transition-transform duration-1000 ${expandedSection === 'time' ? 'transform rotate-180' : ''}`} // Increased duration to 1000ms
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </div>
+        {expandedSection === 'time' && (
+          <div className="mt-2">
+            <p>Content for Time wise...</p>
+          </div>
+        )}
       </div>
     </div>
 
-   
-        
-        </>
-    )
+
+  );
 }
