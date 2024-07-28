@@ -11,10 +11,10 @@ export default function Dashboard() {
 
 
                 <Sidebar />
-                <div className="ml-[58px] mt-[58px]">
+                <div className="ml-[20px] mt-[5px]">
                     <Dropdown />
                         <div className="flex flex-col">
-                                <div className="flex flex-row mt-[51px] gap-[27px] ">
+                                <div className="flex flex-row mt-[5px] gap-[10px] ">
                                     <ReviewsVSMonth />
                                     <Topic/>
                                 </div>

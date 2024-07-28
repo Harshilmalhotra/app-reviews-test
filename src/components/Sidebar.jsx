@@ -4,6 +4,7 @@ import Dashboard from '../assets/dashboard.png';
 import Founder from '../assets/founder_desk.png';
 import Overview from '../assets/overview.png';
 import Profile from '../assets/profile.png';
+import problem from '../assets/problem.png'
 import {Link} from 'react-router-dom';
 
 
@@ -11,6 +12,7 @@ import { useNavigate } from 'react-router-dom'; // Step 1: Import useNavigate
 import {BrowserRouter as Router,Routes,Route }from'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Problem from '../routes/Problem';
 
 
 
@@ -61,10 +63,10 @@ export default function Sidebar() {
                     <Link to="/vibe" className='flex items-center flex-col'><img src={Vibe} alt="Vibe" className="w-[60px] h-[60px]"/>Vibe Check</Link>
                     <Link to="/overview" className='flex items-center flex-col'><img src={Overview} alt="Overview" className="w-[60px] h-[60px]"/>Overview</Link>
                     <Link to="/founder" className='flex items-center flex-col'><img src={Founder} alt="Founder" className="w-[60px] h-[60px]"/>Founder's Desk</Link>
-                
+                    <Link to="/Problem" className='flex items-center flex-col'><img src={problem} alt="Problem" className="w-[60px] h-[60px]"/>Problem</Link>
                     {/* <button onClick={handleSignOut}>Sign Out</button> */}
                 
-                <a href="/profile " className='flex items-center flex-col'><img src={Profile} alt="Profile" className="w-[75px] h-[75px]"/> Profile</a>
+                <a href="/profile " className='flex items-center flex-col'><img src={Profile} alt="Profile" className="w-[60px] h-[60px]"/> Profile</a>
                 </div>
         </div>
         </>

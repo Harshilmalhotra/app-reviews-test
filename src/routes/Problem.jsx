@@ -1,47 +1,37 @@
 import React from 'react';
 
+import SecondGraph from '../components/problemgraphs/SecondGraph';
+import ThirdGraph from '../components/problemgraphs/ThirdGraph';
+import PieGraph from '../components/problemgraphs/PieGraph';
+import TvsSGraph from '../components/problemgraphs/TvsSGraph';
+import Sidebar from '../components/Sidebar';
+import Dropdown from '../components/Dropdown';
+
 function Problem() {
   return (
-    <div className="flex flex-wrap justify-center items-start gap-4 p-4">
-      <div className="card bg-base-100 shadow-xl w-full overflow-hidden rounded-lg" key="large-card" style={{ width: '628.57px', height: '555px' }}>
-        <figure className="flex justify-center items-center h-full w-full">
-          <img
-            src='graph.png'
-            alt="graph"
-            className="object-cover w-full h-full"
-          />
-        </figure>
+
+<div className="flex w-full flex-col lg:flex-row bg-root-2">
+<div className="card   grid h-full flex-grow place-items-left"><Sidebar/></div>
+
+<div className="card   grid h-full w-full flex-grow place-items-left">
+<div className="ml-[10px] mt-[5px]">
+<Dropdown />
+    <div className="flex flex-wrap justify-center items-start gap-4 p-4" >
+      <div className="card bg-orange-200 shadow-xl w-full overflow-hidden rounded-lg" style={{ maxWidth: '628.57px', minHeight: '555px', padding: '20px' }}>
+        <TvsSGraph />
       </div>
       <div className="flex flex-col gap-4">
-        <div className="card bg-base-100 w-full shadow-xl overflow-hidden rounded-lg" key="small-card-1" style={{ width: '333.33px', height: '250px', marginBottom: '40px' }}>
-          <figure className="flex justify-center items-center h-full w-full">
-            <img
-              src="graph2.png"
-              alt="Graph 2"
-              className="object-cover w-full h-full"
-            />
-          </figure>
+        <div className="card bg-base-100 w-full shadow-xl overflow-hidden rounded-lg" style={{ maxWidth: '333.33px', minHeight: '250px', padding: '20px' }}>
+          <SecondGraph />
         </div>
-        <div className="card bg-base-100 w-full shadow-xl overflow-hidden rounded-lg" key="small-card-2" style={{ width: '333.33px', height: '250px' }}>
-          <figure className="flex justify-center items-center h-full w-full">
-            <img
-              src="graph 3.png"
-              alt="Graph 3"
-              className="object-cover w-full h-full"
-            />
-          </figure>
+        <div className="card bg-grey-200 w-full shadow-xl overflow-hidden rounded-lg" style={{ maxWidth: '333.33px', minHeight: '250px', padding: '20px' }}>
+          <ThirdGraph />
         </div>
       </div>
-      <div className="card bg-base-100 shadow-xl w-full overflow-hidden rounded-lg" key="thin-card" style={{ width: '226.8px', height: '550px' }}>
-        <figure className="flex justify-center items-center h-full w-full">
-          <img
-            src="analysis.png"
-            alt="analysis"
-            className="object-cover w-full h-full"
-          />
-        </figure>
+      <div className="card bg-cyan-200 shadow-xl p-5 overflow-hidden rounded-lg" style={{ maxWidth: '226.8px', minHeight: '550px', padding: '20px' }}>
+        <PieGraph />
       </div>
-    </div>
+    </div></div></div></div>
   );
 }
 
