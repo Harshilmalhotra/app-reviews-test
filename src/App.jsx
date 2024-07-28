@@ -21,11 +21,17 @@ const App = () => {
             </div>
 
             <div>
-                <Link to="/dashboard">Dashboard</Link>
-                <Link to="/vibe">Vibe Check</Link>
-                <Link to="/overview">Overview</Link>
-                <Link to="/problem">Problem</Link>
+                <Link to="/dashboard">Dashboard</Link><br/>
+                <Link to="/vibe">Vibe Check</Link><br/>
+                <Link to="/overview">Overview</Link><br/>
+                <Link to="/problem">Problem</Link><br/>
             </div>
+
+        <div className='text-4xl'>
+            This is landing page of app reviews
+        </div>
+
+
         </div>
     );
 };
