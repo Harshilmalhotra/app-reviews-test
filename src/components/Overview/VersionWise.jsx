@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-export default function TopicWise() {
+export default function VersionWise() {
 
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState('Select Topic');
+  const [selectedOption, setSelectedOption] = useState('Select Version');
 
   const toggleDropdown = () => setIsOpen(!isOpen);
   const handleOptionClick = (option) => {
@@ -28,7 +28,7 @@ export default function TopicWise() {
                 </button>
                 {isOpen && (
                   <ul className="absolute z-10 w-full mt-2 bg-white border rounded shadow-lg">
-                    {['Option 1', 'Option 2', 'Option 3'].map((option) => (
+                    {['v1', 'v2', 'v3'].map((option) => (
                       <li
                         key={option}
                         onClick={() => handleOptionClick(option)}
