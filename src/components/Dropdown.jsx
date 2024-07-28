@@ -1,18 +1,30 @@
-import { IoIosArrowDropdownCircle } from "react-icons/io";
-export default function Dropdown() {
-    return (
-        <>
-            <div className="dropdown dropdown-hover text-white ">
-                <div tabIndex={0} role="button" className="btn m-1 bg-root-1 w-[375px] h-[37.98] rounded-[50px] drop-shadow-xl flex justify-between ">Hover <IoIosArrowDropdownCircle/></div>
-                <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-                    <li><a>Play Store</a></li>
-                    <li><a>App Store</a></li>
-                    <li><a>Combined</a></li>
-                    
-                </ul>
-            </div>
-        </>
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setSelection } from '../redux/dropdownSlice';
 
+const Dropdown = () => {
+  const dispatch = useDispatch();
+  const selection = useSelector(state => state.dropdown.selection);
 
-    )
-}
+  const handleChange = (event) => {
+    dispatch(setSelection(event.target.value));
+  };
+
+  return (
+    <div className="pt-4" >
+      <select
+        value={selection}
+        onChange={handleChange}
+        className=" w-[400px]  rounded-3xl p-1  bg-root-1 text-xl font-semibold text-center"
+      >
+        
+        <option value="Play Store">Play Store</option>
+        <option value="App Store">App Store</option>
+        <option value="Combined">Combined</option>
+      </select>
+  
+    </div>
+  );
+};
+
+export default Dropdown;
