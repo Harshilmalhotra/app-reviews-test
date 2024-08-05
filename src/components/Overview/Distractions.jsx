@@ -36,7 +36,7 @@ export default function Distractions() {
       <div className='flex flex-row w-[1320px] justify-between px-5 pt-5'>
       <h2 className="text-xl font-semibold text-white">Distractions Table</h2>
       <button
-        className="mb-4 px-4 py-2 bg-root-2 text-white  hover:bg-root-1 focus:outline-none  rounded-[20px]"
+        className="mb-4 px-4 py-2 bg-slate-700 text-white  hover:bg-root-1 focus:outline-none  rounded-[20px]"
         onClick={downloadCSV}
       >
         Export to CSV
