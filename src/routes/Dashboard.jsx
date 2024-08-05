@@ -20,19 +20,22 @@ export default function Dashboard() {
             <div className="flex bg-slate-700">   {/* left right division */}
                 <SideNav active="Dashboard" />
 
-                <div className="flex flex-col m-4 ml-8">
+                <div className="flex flex-col flex-grow">
                     <Dropdown />
 
-                    <div className=" flex flex-row gap-8 h-[300px] mt-4">   {/* dropdown division */}
+                    <div className="grid p-8">
 
-                        <EagleEye />
-                        <StarVNumber />
+                        <div className="flex flex-row justify-between gap-8 h-[300px] mt-4">   {/* dropdown division */}
 
-                    </div>
-                    <div className="flex flex-row  gap-8 mt-5 h-[280px]">
-                        <MostRated /> {/* best and funny review division */}
-                        <BestReview />
-                        <FunnyReview />
+                            <EagleEye />
+                            <StarVNumber />
+
+                        </div>
+                        <div className="flex flex-row justify-between gap-8 mt-5 h-[280px]">
+                            <MostRated /> {/* best and funny review division */}
+                            <BestReview />
+                            <FunnyReview />
+                        </div>
                     </div>
 
                 </div>

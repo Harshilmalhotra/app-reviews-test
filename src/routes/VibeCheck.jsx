@@ -16,23 +16,20 @@ export default function Vibe() {
         <>
             <div className="flex bg-slate-700">
 
+                <SideNav active="Vibe" />
 
-                <SideNav active="Vibe"/>
-                <div className="ml-[20px] mt-[5px]">
+                <div className="flex flex-col flex-grow">
                     <Dropdown />
-                        <div className="flex flex-col">
-                                <div className="flex flex-row mt-[5px] gap-[10px] ">
-                                    <ReviewsVSMonth />
-                                    <Topic/>
-                                </div>
-                                <SaMoM />
+
+                    <div className="grid p-8">
+                        <div className="flex flex-row mt-[5px] gap-4">
+                            <ReviewsVSMonth />
+                            <Topic />
                         </div>
-                   
+                        <SaMoM />
+                    </div>
 
                 </div>
-                
-
-               
 
             </div>
 

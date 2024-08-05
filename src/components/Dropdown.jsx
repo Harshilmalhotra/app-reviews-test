@@ -11,18 +11,18 @@ const Dropdown = () => {
   };
 
   return (
-    <div className="pt-4" >
+    <div className="w-full bg-[#273042] shadow-lg p-2 mb-6" >
       <select
         value={selection}
         onChange={handleChange}
-        className=" w-[400px]  rounded-3xl p-1  bg-root-1 text-xl font-semibold text-center"
+        className="w-full px-6 py-3 bg-[#273042] text-white text-xl font-semibold focus:outline-none"
       >
-        
+
         <option value="Play Store">Play Store</option>
         <option value="App Store">App Store</option>
         <option value="Combined">Combined</option>
       </select>
-  
+
     </div>
   );
 };
