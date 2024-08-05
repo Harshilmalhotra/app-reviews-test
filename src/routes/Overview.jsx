@@ -1,20 +1,20 @@
-import React from 'react';
-import Sidebar from '../components/Sidebar';
+import React, { useEffect } from 'react';
+import SideNav from '../components/SideNav/SideNav';
 import Dropdown from '../components/Dropdown';
 import TrueRating from '../components/Overview/TrueRating'; // Updated path
 import TopicWise from '../components/Overview/TopicWise'; // Updated path
 import VersionWise from '../components/Overview/VersionWise'; // Updated path
 import Distractions from '../components/Overview/Distractions'; // Updated path
 
-function Overview() {
+export default function Overview() {
 
-  
-
-
+  useEffect(() => {
+      document.title = 'Overview | App Reviews';
+  }, []);
 
   return (
-    <div className="flex bg-root-2"> {/* left right division */}
-      <Sidebar />
+    <div className="flex bg-slate-700"> {/* left right division */}
+      <SideNav active="Overview"/>
 
       <div className="flex flex-col m-4 ml-8">
         <Dropdown />
@@ -36,5 +36,3 @@ function Overview() {
     </div>
   );
 }
-
-export default Overview;

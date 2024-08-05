@@ -22,7 +22,7 @@ export default function TopicWise() {
               <div className="relative">
                 <button
                   onClick={toggleDropdown}
-                  className="px-4 py-1 bg-root-2 text-white hover:bg-root-1 hover:border-root-2 border-2 border-root-1 rounded-[20px]   focus:outline-none"
+                  className="px-4 py-1 bg-slate-700 text-white hover:bg-root-1 hover:border-slate-700 border-2 border-root-1 rounded-[20px]   focus:outline-none"
                 >
                   {selectedOption}
                 </button>
