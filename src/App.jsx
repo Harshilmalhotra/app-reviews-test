@@ -1,6 +1,6 @@
-import './App.css';
 import { Link } from 'react-router-dom';
 
+import 'chart.js/auto';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import SideNav from './components/SideNav/SideNav';

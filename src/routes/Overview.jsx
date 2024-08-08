@@ -19,18 +19,20 @@ export default function Overview() {
       <div className="flex flex-col flex-grow">
         <Dropdown />
 
-        <div className="grid p-8">
-
-          <div className="flex flex-row gap-8 mt-0 h-[280px]">
-            {/* rating will come here */}
+        <div className="grid p-8 grid-rows-5 grid-cols-5 grid-flow-row gap-8 h-full">
+          <div className="row-span-2 col-span-1">
             <TrueRating />
-            <TopicWise />
-            <VersionWise />
-
           </div>
-          <div className="">
+          <div className="row-span-2 col-span-2">
+            <TopicWise />
+          </div>
+          <div className="row-span-2 col-span-2">
+            <VersionWise />
+          </div>
+          <div className="row-span-3 col-span-5">
             <Distractions />
           </div>
+
         </div>
 
       </div>

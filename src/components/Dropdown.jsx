@@ -15,9 +15,8 @@ const Dropdown = () => {
       <select
         value={selection}
         onChange={handleChange}
-        className="w-full px-6 py-3 bg-[#273042] text-white text-xl font-semibold focus:outline-none"
+        className="w-full px-6 py-2 bg-[#273042] text-white/80 focus:outline-none"
       >
-
         <option value="Play Store">Play Store</option>
         <option value="App Store">App Store</option>
         <option value="Combined">Combined</option>
