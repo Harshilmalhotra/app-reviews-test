@@ -9,29 +9,32 @@ import Distractions from '../components/Overview/Distractions'; // Updated path
 export default function Overview() {
 
   useEffect(() => {
-      document.title = 'Overview | App Reviews';
+    document.title = 'Overview | App Reviews';
   }, []);
 
   return (
     <div className="flex bg-slate-700"> {/* left right division */}
-      <SideNav active="Overview"/>
+      <SideNav active="Overview" />
 
-      <div className="flex flex-col m-4 ml-8">
+      <div className="flex flex-col flex-grow">
         <Dropdown />
 
-        <div className="flex flex-col gap-8 h-[300px] mt-4"> {/* dropdown division */}
-
-          <div className="flex flex-row gap-8 mt-0 h-[280px]">
-            {/* rating will come here */}
+        <div className="grid p-8 grid-rows-5 grid-cols-5 grid-flow-row gap-8 h-full">
+          <div className="row-span-2 col-span-1">
             <TrueRating />
-            <TopicWise />
-            <VersionWise />           
-
           </div>
-          <div className="">         
+          <div className="row-span-2 col-span-2">
+            <TopicWise />
+          </div>
+          <div className="row-span-2 col-span-2">
+            <VersionWise />
+          </div>
+          <div className="row-span-3 col-span-5">
             <Distractions />
           </div>
+
         </div>
+
       </div>
     </div>
   );

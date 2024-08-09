@@ -107,7 +107,7 @@ const Graph = () => {
   };
 
   return (
-    <div className="card overflow-x-auto whitespace-nowrap py-4 px-2 h-full w-full shadow-xl" style={{ backgroundColor: '#ffffff' }} onClick={toggleView}>
+    <div className="card overflow-x-auto whitespace-nowrap p-2 h-full w-full shadow-xl" style={{ backgroundColor: '#ffffff' }} onClick={toggleView}>
       <div className="card-body">
         {showGraph ? (
           <Bar data={data} options={options} plugins={[zoomPlugin]} />
